@@ -43,7 +43,7 @@ cryptg = [
 
 [project.urls]
 Homepage = "https://telethon.dev"
-Source = "https://codeberg.org/Lonami/Telethon"
+Source = "https://github.com/tomjs2/Telethon/tree/tgreg-maintained"
 Download = "https://codeberg.org/Lonami/Telethon/tags"
 Documentation = "https://docs.telethon.dev"
 Reference = "https://tl.telethon.dev"

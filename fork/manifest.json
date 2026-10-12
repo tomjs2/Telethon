@@ -1,0 +1,17 @@
+{
+  "upstream_url": "https://codeberg.org/Lonami/Telethon.git",
+  "upstream_branch": "v1",
+  "upstream_commit": "0205278e715dd4a7454de683b9b9b76f0e13db85",
+  "origin_url": "https://github.com/tomjs2/Telethon.git",
+  "maintenance_branch": "tgreg-maintained",
+  "distribution": "Telethon",
+  "version": "1.45.0+tgreg.1",
+  "layer": 230,
+  "opentele_version": "1.15.1",
+  "baseline_comparison": {
+    "python_files": 160,
+    "changed": 0,
+    "missing": 0,
+    "extra": 0
+  }
+}

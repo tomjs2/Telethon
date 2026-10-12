@@ -1,5 +1,9 @@
 Telethon
 ========
+This maintained fork tracks the Codeberg upstream and keeps local changes on
+``tgreg-maintained``. See `fork maintenance <fork/README.md>`_ for the pinned
+baseline, build receipts, compatibility checks, and upgrade procedure.
+
 .. epigraph::
 
   ⭐️ Thanks **everyone** who has starred the project, it means a lot!
