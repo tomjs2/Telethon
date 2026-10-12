@@ -72,7 +72,9 @@ def build(output):
             'opentele_version': manifest['opentele_version'],
             'python': sys.version,
             'source_date_epoch': epoch,
-            'builder': {name: metadata.version(name) for name in ('pip', 'hatchling')},
+            'builder': {name: metadata.version(name) for name in (
+                'pip', 'hatchling', 'setuptools', 'wheel', 'packaging',
+                'pathspec', 'pluggy', 'trove-classifiers')},
         }
         shutil.copyfile(wheel, destination)
         receipt_path.write_text(json.dumps(receipt, indent=2) + '\n')

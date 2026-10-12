@@ -16,14 +16,17 @@ python3.12 -m venv .fork-venv
 
 构建目录同时保存 JSON 收据，包含完整维护 commit、上游 commit、源码归档和 wheel 的 SHA256、版本和 Layer。构建器拒绝覆盖同名发布文件。把上一次发布的 wheel 和收据一起保留，部署前校验 SHA256；项目依赖文件也应固定完整维护 commit，不能只引用分支名。
 
-检查脚本创建内存 session，检查版本、Layer、opentele 继承关系和 TL 序列化，不连接 Telegram。运行上游单元测试前，在开发环境安装 pytest 和 pytest-asyncio，然后生成源码中的 TL 文件：
+检查脚本创建内存 session，检查版本、Layer、opentele 继承关系和 TL 序列化，不连接 Telegram。运行上游单元测试前，在开发环境安装固定检查依赖，然后生成源码中的 TL 文件：
 
 ```sh
+.fork-venv/bin/python -m pip install -r fork/test-requirements.txt
 .fork-venv/bin/python setup.py gen
 .fork-venv/bin/python -m pytest tests/telethon
 ```
 
 离线检查证明包构建和兼容关系，不证明实际网络行为或账号风控结果。未来修改行为时，应增加能检出该行为回归的测试。
+
+初始基线的检查结果见 `fork/validation.md`。上游现有测试失败需要与未修改基线比较；不能把已有失败静默跳过或报告成全部通过。
 
 ## 合并上游
 
